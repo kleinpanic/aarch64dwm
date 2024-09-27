@@ -1,0 +1,14 @@
+[Unit]
+[Unit]
+Description=SystemBar for DWM from suckless
+After=default.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/statusbar
+Restart=on-failure
+Environment=DISPLAY=:0
+Environment=XAUTHORITY=/home/klein/.Xauthority
+
+[Install]
+WantedBy=default.target
